@@ -37,4 +37,8 @@ gem 'jquery-rails'
 # To use debugger
 gem 'debugger'
 
+# Embed the V8 Javascript interpreter into Ruby
+gem 'therubyracer'
+
+# Use Twitter Bootstrap
 gem 'less-rails-bootstrap'
