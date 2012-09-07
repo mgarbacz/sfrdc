@@ -7,5 +7,7 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Creating static controller to handle index on 'static' pages
 * Creating static page parts controller to handle content of 'static' pages
 * Need to decide on a better name than 'static pages'
-* Recreating all other data-powered controllers as they exist in old site
-* Researching gems to potentially replace old site's gems
+* Recreating all other data-powered controllers as they exist in original site
+* Researching gems to potentially replace original site's gems
+* Replacing original CSS with twitter's bootstrap
+* Considering impact of changes to mobile version of the website
