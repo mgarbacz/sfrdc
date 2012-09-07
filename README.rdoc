@@ -4,3 +4,8 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 
 == Todos 
 * Rebuilding from scratch on 3.2.8 rails.
+* Creating static controller to handle index on 'static' pages
+* Creating static page parts controller to handle content of 'static' pages
+* Need to decide on a better name than 'static pages'
+* Recreating all other data-powered controllers as they exist in old site
+* Researching gems to potentially replace old site's gems
