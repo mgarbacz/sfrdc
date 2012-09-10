@@ -13,3 +13,6 @@
  *= require twitter/bootstrap
  */
 
+#page {
+  margin-top:60px;
+}

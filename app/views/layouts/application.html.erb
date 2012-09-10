@@ -1,4 +1,8 @@
 <%= render "layouts/header" %>
+  <div id="page" class="container">
+    <div class="notice" style="background:green;">
+      <%= flash[:notice] %>
+    </div>
 
 <%= yield %>
 
