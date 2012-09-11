@@ -5,14 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= content_for?(:title) ? yield(:title) :
-    "State Farm&trade; Research and Development Center".html_safe %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+    'State Farm&trade; Research and Development Center'.html_safe %></title>
+  <%= stylesheet_link_tag    'application', :media => 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
   <%= yield(:head) %>
 </head>
 <body>
-  <%= render "layouts/header" %>
+  <%= render 'layouts/header' %>
 
   <div id="page" class="container">
     <div class="notice" style="background:green;">
@@ -21,7 +22,7 @@
 
     <%= yield %>
 
-    <%= render "layouts/footer" %>
+    <%= render 'layouts/footer' %>
   </div>
 </body>
 </html>
