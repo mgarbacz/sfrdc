@@ -13,6 +13,6 @@
  *= require twitter/bootstrap
  */
 
-#page {
-  margin-top:60px;
+body {
+  padding-top:60px;
 }
