@@ -15,14 +15,17 @@
 <body>
   <%= render 'layouts/header' %>
 
-  <div id="page" class="container">
-    <div class="notice" style="background:green;">
-      <%= flash[:notice] %>
-    </div>
+  <div id="page">
+    <div class="container">
+      <div class="notice" style="background:green;">
+        <%= flash[:notice] %>
+      </div>
 
-    <%= yield %>
+      <%= yield %>
 
-    <%= render 'layouts/footer' %>
-  </div>
+    </div><!-- end .container -->
+  </div><!-- end #page -->
+
+  <%= render 'layouts/footer' %>
 </body>
 </html>

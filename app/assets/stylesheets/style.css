@@ -1,7 +1,29 @@
 body {
-  background-color:#f5f5f5;
+  background-color:#f1f1f1;
   color:#555;
-  padding-top:160px;
+  /* Padding to account for fixed-top header */
+  padding-top:118px;
+}
+
+/* PAGE */
+div#page {
+  background-color:#fafafa;
+}
+
+/* Changing default Bootstrap navbar style */
+.navbar-inner {
+  background-color:#fafafa;
+  background-image:none;
+  background-repeat:no-repeat;
+  filter:none;
+}
+
+.navbar .nav {
+  font-size:16px;
+}
+
+.navbar .nav > li {
+  padding:0 12px;
 }
 
 /* HEADER */
@@ -30,14 +52,22 @@ div#header_statefarm_logo {
 
 /* FOOTER */
 footer {
-  background-color:
+  padding:10px 0;
 }
 
 div#social_media {
   float:right;
 }
 
-div.icon {
+div#social_media div.icon {
   float:left;
-  padding:0 10px;
+  padding:10px 10px;
+}
+
+div#legal {
+  clear:both;
+  font-family:arial, sans-serif;
+  font-size:10px;
+  padding:10px 0;
+  text-align:center;
 }
