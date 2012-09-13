@@ -9,34 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  *= require twitter/bootstrap
+ *= require_tree .
+ *= require style
  */
-
-body {
-  padding-top:160px;
-}
-
-/* HEADER */
-div#header_logos {
-  background:url(header_red_gradient.png) no-repeat center center #920000;
-  padding:10px 0;
-}
-
-div#header_rdc_logo {
-  width:450px;
-  margin-left:90px;
-}
-
-div#header_uiuc_logo {
-  width:320px;
-  margin-top:15px;
-  margin-left:150px;
-}
-
-div#header_statefarm_logo {
-  width:154px;
-  float:right;
-  margin-top:-40px;
-  margin-right:110px;
-}
