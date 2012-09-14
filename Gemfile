@@ -45,6 +45,7 @@ end
 group :test do
   gem 'cucumber'
   gem 'cucumber-rails'
+  gem 'database_cleaner'
 end
 
 # Embed the V8 Javascript interpreter into Ruby

@@ -1,4 +1,6 @@
 Sfrdc::Application.routes.draw do
+  resources :quotes
+
   root :to => 'static#home'
 
   match 'home' => 'static#home'
