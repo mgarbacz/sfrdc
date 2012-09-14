@@ -38,7 +38,9 @@ gem 'jquery-rails'
 group :development, :test do
   gem 'debugger'
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'cucumber'
+  gem 'cucumber-rails'
 end
 
 # Embed the V8 Javascript interpreter into Ruby
