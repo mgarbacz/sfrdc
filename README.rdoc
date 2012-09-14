@@ -14,25 +14,25 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 
 == Controllers & actions
 * static:
-** :home
-** :about_us
-** :opportunities
-** :interns_and_staff
-** :benefits
-** :partnerships
-** :contact_us
-** :admin
+  * :home
+  * :about_us
+  * :opportunities
+  * :interns_and_staff
+  * :benefits
+  * :partnerships
+  * :contact_us
+  * :admin
 * static_page_content:
 * employees
 * jobs
 * quotes
-** :index
-** :show
-** :new
-** :edit
-** :create
-** :update
-** :destroy
+  * :index
+  * :show
+  * :new
+  * :edit
+  * :create
+  * :update
+  * :destroy
 * events
 * posts
 * users
