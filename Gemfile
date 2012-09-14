@@ -34,14 +34,12 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem 'debugger'
-
-# To use rspec
-gem 'rspec'
-
-# To use cucumber
-gem 'cucumber'
+# For development and test
+group :development, :test do
+  gem 'debugger'
+  gem 'rspec'
+  gem 'cucumber'
+end
 
 # Embed the V8 Javascript interpreter into Ruby
 gem 'therubyracer'
