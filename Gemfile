@@ -37,6 +37,12 @@ gem 'jquery-rails'
 # To use debugger
 gem 'debugger'
 
+# To use rspec
+gem 'rspec'
+
+# To use cucumber
+gem 'cucumber'
+
 # Embed the V8 Javascript interpreter into Ruby
 gem 'therubyracer'
 
