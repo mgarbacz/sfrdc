@@ -37,6 +37,10 @@ gem 'jquery-rails'
 # For development and test
 group :development, :test do
   gem 'debugger'
+end
+
+# For test
+group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'cucumber'
