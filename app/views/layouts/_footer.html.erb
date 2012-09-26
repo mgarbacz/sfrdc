@@ -1,5 +1,7 @@
 <footer>
   <div class="container">
+    <%= render :partial => 'quotes/quote',
+               :object => Quote.first(:order => 'RANDOM()') %>
     <div id="social_media">
       <div class="icon">
         <%= link_to image_tag('social_media_icon_twitter.png', 

@@ -1,0 +1,6 @@
+<% if !quote.blank? %>
+  <%= div_for quote do %>
+    &ldquo;<%= quote.quote %>&rdquo;
+    <%= quote.author %>
+  <% end %>
+<% end %>
