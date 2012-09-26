@@ -16,3 +16,6 @@
 
 # Ignore mac's DS_STORE
 .DS_STORE
+
+# Ignore actual passwords config file
+/config/passwords.config
