@@ -1,16 +1,16 @@
 Sfrdc::Application.routes.draw do
+  root :to => 'pages#home'
+
+  match 'home' => 'pages#home'
+  match 'about_us' => 'pages#about_us'
+  match 'opportunities' => 'pages#opportunities'
+  match 'interns_and_staff' => 'pages#interns_and_staff'
+  match 'benefits' => 'pages#benefits'
+  match 'partnerships' => 'pages#partnerships'
+  match 'contact_us' => 'pages#contact_us'
+  match 'admin' => 'pages#admin'
+
   resources :quotes
-
-  root :to => 'static#home'
-
-  match 'home' => 'static#home'
-  match 'about_us' => 'static#about_us'
-  match 'opportunities' => 'static#opportunities'
-  match 'interns_and_staff' => 'static#interns_and_staff'
-  match 'benefits' => 'static#benefits'
-  match 'partnerships' => 'static#partnerships'
-  match 'contact_us' => 'static#contact_us'
-  match 'admin' => 'static#admin'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
