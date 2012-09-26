@@ -1,22 +1,28 @@
-Given /^I know how many quotes I have$/ do
-  @number_quotes = Quote.count
+Given /^I am an admin$/ do
+  #nothing for now!
 end
 
-Given /^I have no quotes$/ do
-  Quote.delete_all
-end
-
-When /^I create a new quote$/ do
+Then /^I can create new quotes$/ do
   quote = Quote.new
-  quote.quote = 'Test quote'
-  quote.author = 'Quote tester'
+  quote.quote = 'Test quote of magnificence'
+  quote.author = 'Quote Creator'
   quote.save
 end
 
-Then /^I should have one additional quote$/ do
-  Quote.count.should == @number_quotes + 1
+Then /^I can update existing quotes$/ do
+  quote = Quote.new
+  quote.quote = 'Test quote to be edited'
+  quote.author = 'Quote Editor'
+  quote.save
+
+  quote.update_attributes(:quote => 'Test quote of edited magnificence')
 end
 
-Then /^I should have (\d+) quote$/ do |num_quotes|
-  Quote.count.should == num_quotes.to_i
+Then /^I can delete existing quotes$/ do
+  quote = Quote.new
+  quote.quote = 'Test quote to be deleted'
+  quote.author = 'Quote Deletor'
+  quote.save
+
+  quote.delete
 end
