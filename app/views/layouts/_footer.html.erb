@@ -3,7 +3,7 @@
     <div class="row">
       <%= render :partial => 'quotes/quote',
                  :object => Quote.first(:order => 'RANDOM()') %>
-      <div class="span3" id="social_media">
+      <div id="social_media">
         <div class="icon">
           <%= link_to image_tag('social_media_icon_twitter.png', 
               :title => 'Follow us on Twitter',
