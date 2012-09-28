@@ -55,8 +55,13 @@ footer {
   padding:10px 0;
 }
 
+div.quote {
+  text-align:center;
+  padding:20px 0 0 0;
+}
+
 div#social_media {
-  float:right;
+  padding-top:10px;
 }
 
 div#social_media div.icon {
