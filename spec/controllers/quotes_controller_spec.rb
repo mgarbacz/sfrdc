@@ -24,7 +24,8 @@ describe QuotesController do
   # Quote. As you add validations to Quote, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    { :quote => 'Test quote of magnificence.',
+      :author => 'Quote Tester' }
   end
 
   # This should return the minimal set of values that should be in the session
