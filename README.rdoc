@@ -26,13 +26,6 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * employees
 * jobs
 * quotes
-  * :index
-  * :show
-  * :new
-  * :edit
-  * :create
-  * :update
-  * :destroy
 * events
 * posts
 * users

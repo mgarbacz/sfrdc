@@ -41,13 +41,6 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-# For test
-group :test do
-  gem 'database_cleaner'
-  #gem 'cucumber'
-  #gem 'cucumber-rails'
-end
-
 # Embed the V8 Javascript interpreter into Ruby
 gem 'therubyracer'
 
