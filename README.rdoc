@@ -35,3 +35,4 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 
 == Notes
 * Generated js/css files won't be served by rails in production (b/c static)
+* Need ImageMagick(images) and GhostScript(pdfs) installed
