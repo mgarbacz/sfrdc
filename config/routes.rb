@@ -1,4 +1,6 @@
 Sfrdc::Application.routes.draw do
+  resources :employees
+
   root :to => 'pages#home'
 
   match 'home' => 'pages#home'
