@@ -7,7 +7,7 @@
 
 <p>
   <b>Type:</b>
-  <%= @employee.type %>
+  <%= @employee.employee_type %>
 </p>
 
 <p>
@@ -20,6 +20,8 @@
   <%= @employee.bio %>
 </p>
 
+<%= image_tag @employee.avatar.url(:regular) %>
+<%= image_tag @employee.avatar.url(:thumb) %>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

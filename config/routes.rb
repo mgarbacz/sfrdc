@@ -1,5 +1,4 @@
 Sfrdc::Application.routes.draw do
-  resources :employees
 
   root :to => 'pages#home'
 
@@ -13,6 +12,7 @@ Sfrdc::Application.routes.draw do
   match 'admin' => 'pages#admin'
 
   resources :quotes
+  resources :employees
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
