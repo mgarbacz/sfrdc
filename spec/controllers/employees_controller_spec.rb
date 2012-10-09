@@ -25,7 +25,7 @@ describe EmployeesController do
   # update the return value of this method accordingly.
   def valid_attributes
     { :name => 'Joe Test',
-      :employee_type => 'Intern',
+      :role => 'Intern',
       :department => 'Systems' }
   end
 

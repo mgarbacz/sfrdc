@@ -4,7 +4,7 @@ describe "employees/show" do
   before(:each) do
     @employee = assign(:employee, stub_model(Employee,
       :name => "Name",
-      :type => "Type",
+      :role => "Role",
       :department => "Department",
       :bio => "MyText"
     ))
@@ -14,7 +14,7 @@ describe "employees/show" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Name/)
-    rendered.should match(/Type/)
+    rendered.should match(/Role/)
     rendered.should match(/Department/)
     rendered.should match(/MyText/)
   end

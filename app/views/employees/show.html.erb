@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <b>Type:</b>
-  <%= @employee.employee_type %>
+  <b>Role:</b>
+  <%= @employee.role %>
 </p>
 
 <p>
@@ -20,6 +20,7 @@
   <%= @employee.bio %>
 </p>
 
+<%= image_tag @employee.avatar.url(:original) %>
 <%= image_tag @employee.avatar.url(:regular) %>
 <%= image_tag @employee.avatar.url(:thumb) %>
 

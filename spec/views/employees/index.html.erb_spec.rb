@@ -5,13 +5,13 @@ describe "employees/index" do
     assign(:employees, [
       stub_model(Employee,
         :name => "Name",
-        :employee_type => "Type",
+        :role => "Role",
         :department => "Department",
         :bio => "MyText"
       ),
       stub_model(Employee,
         :name => "Name",
-        :employee_type => "Type",
+        :role => "Role",
         :department => "Department",
         :bio => "MyText"
       )
@@ -22,7 +22,7 @@ describe "employees/index" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => "Type".to_s, :count => 2
+    assert_select "tr>td", :text => "Role".to_s, :count => 2
     assert_select "tr>td", :text => "Department".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2
   end

@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Type</th>
+    <th>Role</th>
     <th>Department</th>
     <th>Bio</th>
     <th></th>
@@ -14,7 +14,7 @@
 <% @employees.each do |employee| %>
   <tr>
     <td><%= employee.name %></td>
-    <td><%= employee.employee_type %></td>
+    <td><%= employee.role %></td>
     <td><%= employee.department %></td>
     <td><%= employee.bio %></td>
     <td><%= link_to 'Show', employee %></td>
