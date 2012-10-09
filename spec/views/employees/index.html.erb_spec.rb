@@ -5,13 +5,13 @@ describe "employees/index" do
     assign(:employees, [
       stub_model(Employee,
         :name => "Name",
-        :type => "Type",
+        :employee_type => "Type",
         :department => "Department",
         :bio => "MyText"
       ),
       stub_model(Employee,
         :name => "Name",
-        :type => "Type",
+        :employee_type => "Type",
         :department => "Department",
         :bio => "MyText"
       )
