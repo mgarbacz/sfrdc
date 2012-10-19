@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Avatar</th>
     <th>Name</th>
     <th>Role</th>
     <th>Department</th>
@@ -13,6 +14,7 @@
 
 <% @employees.each do |employee| %>
   <tr>
+    <td><%= image_tag employee.avatar.url(:thumb) %></td>
     <td><%= employee.name %></td>
     <td><%= employee.role %></td>
     <td><%= employee.department %></td>

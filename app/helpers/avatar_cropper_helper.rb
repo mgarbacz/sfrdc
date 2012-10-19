@@ -1,0 +1,2 @@
+module AvatarCropperHelper
+end

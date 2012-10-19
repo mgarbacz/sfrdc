@@ -11,6 +11,7 @@ Sfrdc::Application.routes.draw do
   match 'contact_us' => 'pages#contact_us'
   match 'admin' => 'pages#admin'
 
+  resources :avatar_cropper
   resources :quotes
   resources :employees
 
