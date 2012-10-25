@@ -2,18 +2,19 @@ Sfrdc::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  match 'home' => 'pages#home'
-  match 'about_us' => 'pages#about_us'
-  match 'opportunities' => 'pages#opportunities'
-  match 'interns_and_staff' => 'pages#interns_and_staff'
-  match 'benefits' => 'pages#benefits'
-  match 'partnerships' => 'pages#partnerships'
-  match 'contact_us' => 'pages#contact_us'
-  match 'admin' => 'pages#admin'
+  match 'home' => 'pages#home', :via => :get
+  match 'about_us' => 'pages#about_us', :via => :get
+  match 'opportunities' => 'pages#opportunities', :via => :get
+  match 'interns_and_staff' => 'pages#interns_and_staff', :via => :get
+  match 'benefits' => 'pages#benefits', :via => :get
+  match 'partnerships' => 'pages#partnerships', :via => :get
+  match 'contact_us' => 'pages#contact_us', :via => :get
+  match 'admin' => 'pages#admin', :via => :get
 
-  resources :avatar_cropper
-  resources :quotes
-  resources :employees
+  match 'avatar_cropper/:id/edit' => 'avatar_cropper#edit', :via => :get
+  match 'avatar_cropper/:id/crop' => 'avatar_cropper#crop', :via => :put
+
+  resources :quotes, :employees
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

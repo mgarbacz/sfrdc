@@ -13,6 +13,11 @@ function showPreview(coordinates) {
     marginLeft: '-' + Math.round(rx * coordinates.x) + 'px',
     marginTop: '-' + Math.round(ry * coordinates.y) + 'px'
   });
+
+  $('#employee_x1').val(coordinates.x);
+  $('#employee_y1').val(coordinates.y);
+  $('#employee_width').val(coordinates.w);
+  $('#employee_height').val(coordinates.h);
 }
 
 $(function() {
