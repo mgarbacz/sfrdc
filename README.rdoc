@@ -8,6 +8,8 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Recreating all other data-powered controllers as they exist in original site
 * Researching gems to potentially replace original site's gems
 * Considering impact of changes to mobile version of the website
+* Roll Avatar Cropper into Employee
+* Have the crop work! Reprocess overwrites thumbnails
 
 == Dones
 * Running on 3.2.8 Rails with 1.9.3 Ruby
