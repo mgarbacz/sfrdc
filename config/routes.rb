@@ -11,9 +11,6 @@ Sfrdc::Application.routes.draw do
   match 'contact_us' => 'pages#contact_us', :via => :get
   match 'admin' => 'pages#admin', :via => :get
 
-  match 'avatar_cropper/:id/edit' => 'avatar_cropper#edit', :via => :get
-  match 'avatar_cropper/:id/crop' => 'avatar_cropper#crop', :via => :put
-
   resources :quotes, :employees
 
   # The priority is based upon order of creation:

@@ -1,5 +1,17 @@
 <h1>Editing employee</h1>
 
+<div class="row">
+  <div class="span8">
+    <p>Edit Thumbnail:</p>
+    <%= image_tag @employee.avatar.url(:original), :id => 'avatar_full' %>
+  </div>
+
+  <p>Preview:</p>
+  <div id="avatar_cropped_container" class="span4">
+    <%= image_tag @employee.avatar.url(:original), :id => 'avatar_cropped' %>
+  </div>
+</div>
+
 <%= render 'form' %>
 
 <%= link_to 'Show', @employee %> |

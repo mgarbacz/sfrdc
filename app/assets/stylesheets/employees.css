@@ -1,0 +1,21 @@
+/*
+ *= require jquery.Jcrop
+ */
+
+#avatar_full {
+  max-width:none;
+}
+
+#avatar_cropped_container {
+  width:300px;
+  height:300px;
+  overflow:hidden
+}
+
+#avatar_cropped {
+  max-width:none;
+}
+
+#crop_results {
+  display:none;
+}
