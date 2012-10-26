@@ -48,6 +48,3 @@ gem 'less-rails-bootstrap'
 
 # For uploads we use Paperclip
 gem 'paperclip'
-
-# Need to use ImageMagick, so need RMagick wrapper
-gem 'rmagick'
