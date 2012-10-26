@@ -44,8 +44,13 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.save
-        format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
-        format.json { render json: @employee, status: :created, location: @employee }
+        if params[:employee][:avatar].blank?
+          format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
+          format.json { render json: @employee, status: :created, location: @employee }
+        else
+          format.html { render action: 'crop' }
+          format.json { head :no_content }
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @employee.errors, status: :unprocessable_entity }
@@ -60,8 +65,15 @@ class EmployeesController < ApplicationController
 
     respond_to do |format|
       if @employee.update_attributes(params[:employee])
-        format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }
-        format.json { head :no_content }
+        if params[:employee][:avatar].blank?
+          # reprocessing here due to paperclip issue #866
+          @employee.avatar.reprocess!
+          format.html { redirect_to @employee, notice: 'Employee was successfully updated.' }
+          format.json { head :no_content }
+        else
+          format.html { render :action => "crop" }
+          format.json { head :no_content }
+        end
       else
         format.html { render action: "edit" }
         format.json { render json: @employee.errors, status: :unprocessable_entity }

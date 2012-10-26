@@ -1,31 +1,29 @@
-require 'RMagick'
-
 class Employee < ActiveRecord::Base
-  attr_accessible :name, :role, :department, :bio, :avatar, :x1, :y1, :width, :height
+  attr_accessible :name, :role, :department, :bio, :avatar,
+                  :crop_x, :crop_y, :crop_w, :crop_h
   validates :name, :role, :department, :presence => true
-  has_attached_file :avatar, 
-                    :styles => { :regular => "300x300#", :thumb => "100x100#" }
+  has_attached_file :avatar, :styles => { :regular => '600x>', 
+                                          :thumb => '100x100#' },
+                    :processors => [:cropper]
 
-  attr_accessor :x1, :y1, :width, :height
+  attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
+  after_update :reprocess_avatar, :if => :cropping?
 
-  def update_attributes(att)
-    original_img = Magick::ImageList.new(self.avatar.path(:original))
-    regular_img = Magick::ImageList.new(self.avatar.path(:regular))
-    thumb_img = Magick::ImageList.new(self.avatar.path(:thumb))
-
-    args = [ att[:x1], att[:y1], att[:width], att[:height] ]
-    args = args.collect { |a| a.to_i }
-
-    regular_img.crop!(*args)
-    regular_img.write(self.avatar.path(:regular))
-
-    thumb_img.crop!(*args)
-    thumb_img.write(self.avatar.path(:thumb))
-
-    # This line remakes reg and thumb, so need to change original
-    self.avatar.reprocess!
-    self.save
-    
-    super(att)
+  def cropping?
+    !crop_x.blank? && !crop_y.blank? && !crop_w.blank? && !crop_h.blank?
   end
+
+  private
+
+  def reprocess_avatar
+    original_geometry = Paperclip::Geometry.from_file(avatar.path(:original))
+    regular_geometry = Paperclip::Geometry.from_file(avatar.path(:regular))
+    ratio = original_geometry.width / regular_geometry.width
+    crop_x = crop_x.to_i * ratio
+    crop_y = crop_y.to_i * ratio
+    crop_w = crop_w.to_i * ratio
+    crop_h = crop_h.to_i * ratio
+    #self.avatar.reprocess!
+  end
+
 end

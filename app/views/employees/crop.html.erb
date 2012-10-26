@@ -1,0 +1,19 @@
+<h1>Cropping Avatar</h1>
+
+<div class="row">
+  <div class="span8">
+    <%= image_tag @employee.avatar.url(:regular), :id => 'avatar_full' %>
+  </div>
+
+  <p>Preview:</p>
+  <div id="avatar_cropped_container" class="span4">
+    <%= image_tag @employee.avatar.url(:regular), :id => 'avatar_cropped' %>
+  </div>
+</div>
+
+<%= form_for @employee do |f| %>
+  <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
+    <%= f.hidden_field attribute, :id => attribute %>
+  <% end %>
+  <p><%= f.submit "Crop" %></p>
+<% end %>

@@ -1,8 +1,8 @@
 //=require jquery.Jcrop
 
 function showPreview(coordinates) {
-  var rx = 300 / coordinates.w;
-  var ry = 300 / coordinates.h;
+  var rx = 100 / coordinates.w;
+  var ry = 100 / coordinates.h;
 
   var baseX = $('#avatar_full').width();
   var baseY = $('#avatar_full').height();
@@ -14,16 +14,17 @@ function showPreview(coordinates) {
     marginTop: '-' + Math.round(ry * coordinates.y) + 'px'
   });
 
-  $('#employee_x1').val(coordinates.x);
-  $('#employee_y1').val(coordinates.y);
-  $('#employee_width').val(coordinates.w);
-  $('#employee_height').val(coordinates.h);
+  $('#crop_x').val(coordinates.x);
+  $('#crop_y').val(coordinates.y);
+  $('#crop_w').val(coordinates.w);
+  $('#crop_h').val(coordinates.h);
 }
 
 $(function() {
   $('#avatar_full').Jcrop({
     onChange: showPreview,
     onSelect: showPreview,
+    setSelect: [0, 0, 100, 100],
     aspectRatio: 1
   });
 });
