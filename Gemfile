@@ -46,5 +46,8 @@ gem 'therubyracer'
 # Use Twitter Bootstrap
 gem 'less-rails-bootstrap'
 
+# For Authentication
+gem 'devise'
+
 # For uploads we use Paperclip
 gem 'paperclip'
