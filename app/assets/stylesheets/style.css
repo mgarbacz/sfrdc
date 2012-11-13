@@ -27,6 +27,18 @@ div#page {
 }
 
 /* HEADER */
+div#user_nav {
+  font-size:16px;
+  right:5px;
+  top:10px;
+  position:absolute;
+}
+
+div#user_nav a {
+  color:#555;
+  text-decoration:none;
+}
+
 div#header_logos {
   background:url(header_red_gradient.png) no-repeat center center #920000;
   padding:10px 0;

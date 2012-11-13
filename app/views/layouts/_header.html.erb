@@ -11,6 +11,13 @@
         <li><%= link_to 'Contact Us',       contact_us_path %></li>
       </ul>
     </div>
+    <% if admin_signed_in? %>
+      <div id="user_nav">
+        <%= link_to 'Admin', admin_path %> |
+        <%= link_to 'Sign out', 
+            destroy_admin_session_path, :method => :delete %>
+      </div>
+    <% end %>
   </nav>
   <div id="header_logos">
     <div class="container">
