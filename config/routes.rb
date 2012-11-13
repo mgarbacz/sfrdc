@@ -11,6 +11,8 @@ Sfrdc::Application.routes.draw do
   match 'contact_us' => 'pages#contact_us', :via => :get
   match 'admin' => 'pages#admin', :via => :get
 
+  devise_for :admins
+
   resources :quotes, :employees
 
   # The priority is based upon order of creation:
