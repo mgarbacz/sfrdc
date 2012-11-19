@@ -17,9 +17,7 @@
 
   <div id="page">
     <div class="container">
-      <div class="notice" style="background:green;">
-        <%= flash[:notice] %>
-      </div>
+      <%= render 'layouts/messages' %>
 
       <%= yield %>
 
