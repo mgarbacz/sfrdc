@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-before_filter :authenticate_admin!, :only => 'admin'
+before_filter :authenticate_admin!, :only => :admin
 
   # Home page
   def home
