@@ -1,5 +1,7 @@
 Sfrdc::Application.routes.draw do
 
+  resources :jobs
+
   root :to => 'pages#home'
 
   match 'home' => 'pages#home', :via => :get
