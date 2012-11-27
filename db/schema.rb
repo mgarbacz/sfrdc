@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(:version => 20121113182808) do
     t.datetime "updated_at",                             :null => false
   end
 
-  add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
-  add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
+  add_index "admins", ["email"], :name => "index_admins_on_email",
+    :unique => true
+  add_index "admins", ["reset_password_token"], 
+    :name => "index_admins_on_reset_password_token", :unique => true
 
   create_table "employees", :force => true do |t|
     t.string   "name"
