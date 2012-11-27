@@ -1,13 +1,11 @@
 Sfrdc::Application.routes.draw do
 
-  resources :jobs
-
   root :to => 'pages#home'
 
   match 'home' => 'pages#home', :via => :get
   match 'about_us' => 'pages#about_us', :via => :get
-  match 'opportunities' => 'pages#opportunities', :via => :get
-  match 'interns_and_staff' => 'pages#interns_and_staff', :via => :get
+  match 'opportunities' => 'jobs#index', :via => :get
+  match 'interns_and_staff' => 'employees#index', :via => :get
   match 'benefits' => 'pages#benefits', :via => :get
   match 'partnerships' => 'pages#partnerships', :via => :get
   match 'contact_us' => 'pages#contact_us', :via => :get
@@ -15,7 +13,7 @@ Sfrdc::Application.routes.draw do
 
   devise_for :admins
 
-  resources :quotes, :employees
+  resources :employees, :jobs, :quotes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

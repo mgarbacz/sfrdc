@@ -16,20 +16,6 @@ describe PagesController do
     end
   end
 
-  describe "GET 'opportunities'" do
-    it "returns http success" do
-      get 'opportunities'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'interns_and_staff'" do
-    it "returns http success" do
-      get 'interns_and_staff'
-      response.should be_success
-    end
-  end
-
   describe "GET 'benefits'" do
     it "returns http success" do
       get 'benefits'

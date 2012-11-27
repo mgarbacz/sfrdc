@@ -9,14 +9,6 @@ before_filter :authenticate_admin!, :only => :admin
   def about_us
   end
 
-  # Opportunities page
-  def opportunities
-  end
-
-  # Interns & Staff page
-  def interns_and_staff
-  end
-
   # Benefits page
   def benefits
   end
