@@ -20,5 +20,8 @@
 # Ignore mac's DS_STORE
 .DS_STORE
 
+# Ignore .swp files if open when committing
+*.swp
+
 # Ignore actual passwords config file
 /config/passwords.config
