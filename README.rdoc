@@ -9,6 +9,7 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Researching gems to potentially replace original site's gems
 * Considering impact of changes to mobile version of the website
 * Further testing of crop feature
+* Decouple departments from code (department model)
 
 == Dones
 * Running on 3.2.8 Rails with 1.9.3 Ruby
