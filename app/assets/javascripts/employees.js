@@ -20,15 +20,40 @@ function showPreview(coordinates) {
   $('#employee_crop_h').val(coordinates.h);
 }
 
-$(function() {
+$(window).load(function() {
   var crop_x = $('#employee_crop_x').val();
   var crop_y = $('#employee_crop_y').val();
   var crop_w = $('#employee_crop_w').val();
   var crop_h = $('#employee_crop_h').val();
 
+  var imageWidth = $('#avatar_full').width();
+  var imageHeight = $('#avatar_full').height();
+
+  // This means we have just created the employee and have not cropped
+  if (crop_w == "0" && crop_h == "0") {
+    if (imageWidth < imageHeight) {
+      crop_x = 0;
+      crop_y = (imageWidth - imageHeight) / 2;
+      crop_w = imageWidth;
+      crop_h = imageWidth;
+    } else if (imageHeight < imageWidth) {
+      console.log('second');
+      crop_x = (imageWidth - imageHeight) / 2;
+      crop_y = 0;
+      crop_w = imageHeight;
+      crop_h = imageHeight;
+    } else {
+      crop_x = 0;
+      crop_y = 0;
+      crop_w = imageWidth;
+      crop_h = imageHeight;
+    }
+  }
+
   $('#avatar_full').Jcrop({
     onChange: showPreview,
     onSelect: showPreview,
+    minSize: [100, 100],
     setSelect: [crop_x, crop_y, crop_x + crop_w, crop_y + crop_h],
     aspectRatio: 1
   });
