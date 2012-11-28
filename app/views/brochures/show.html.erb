@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Department:</b>
+  <%= @brochure.department %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= link_to 'Pdf', @brochure.pdf.url %>
+</p>
+
+<%= link_to 'Edit', edit_brochure_path(@brochure) %> |
+<%= link_to 'Back', brochures_path %>

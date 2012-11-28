@@ -13,7 +13,7 @@ Sfrdc::Application.routes.draw do
 
   devise_for :admins
 
-  resources :employees, :jobs, :quotes
+  resources :brochures, :employees, :jobs, :quotes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
