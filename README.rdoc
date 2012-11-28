@@ -5,11 +5,11 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 == Todos 
 * Rebuilding from scratch on 3.2.8 rails.
 * Creating static page parts controller to handle content of 'static' pages
-* Recreating all other data-powered controllers as they exist in original site
-* Researching gems to potentially replace original site's gems
 * Considering impact of changes to mobile version of the website
 * Further testing of crop feature
 * Decouple departments from code (department model)
+* Create default avatar images for interns & staff
+* Link routes and uploaded files to CMS
 
 == Dones
 * Running on 3.2.8 Rails with 1.9.3 Ruby
@@ -18,6 +18,8 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * New look with Twitter's Bootstrap
 * Roll Avatar Cropper into Employee
 * Implement employee image cropping 
+* Researching gems to potentially replace original site's gems
+* Recreating all other data-powered controllers as they exist in original site
 
 == Controllers & actions
 * static:
