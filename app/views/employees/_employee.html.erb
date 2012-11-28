@@ -1,0 +1,10 @@
+<li class="employee">
+  <%= link_to(image_tag(employee.avatar.url(:thumb), :class => 'shadow'),
+    employee) %>
+  <div class="infoBubble">
+    <div>
+      <%= employee.name %><br />
+      <em><%= employee.department %></em>
+    </div>
+  </div>
+</li>

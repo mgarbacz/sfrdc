@@ -2,6 +2,61 @@
  *= require jquery.Jcrop
  */
 
+ul.employees {
+  float:left;
+  list-style-type:none;
+  list-style-position:inside;
+  margin:0;
+  padding:10px 0;
+  width:100%;
+  z-index:0;
+}
+
+ul.employees li {
+  display:inline;
+  float:left;
+  height:110px;
+  margin:0 46px 46px 0;
+  position:relative;
+  width:110px;
+}
+
+ul.employees li a {
+  margin:0;
+  padding:0;
+}
+
+ul.employees li.employee:hover div.infoBubble {
+  display:block;
+}
+
+ul.employees li div.infoBubble {
+  background:url(infoBubble.png) no-repeat 70px 0;
+  position:absolute;
+  top:105px;
+  z-index:1;
+  display:none;
+}
+
+ul.employees li div.infoBubble div {
+  background:#555;
+  padding:11px;
+  position:relative;
+  top:16px;
+  left:-10px;
+  width:120px;
+  z-index:1
+}
+
+ul.employees li div.infoBubble div {
+  color:#fafafa;
+  font-weight:normal;
+}
+
+ul.employees li div.infoBubble em {
+  color:#999;
+}
+
 #avatar_full {
   max-width:none;
 }

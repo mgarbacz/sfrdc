@@ -5,6 +5,10 @@ before_filter :authenticate_admin!, :except => [:index, :show]
   # GET /employees.json
   def index
     @employees = Employee.all
+    @staff = Employee.all(:conditions => { :role => 'Staff' },
+      :order => 'department, name')
+    @interns = Employee.all(:conditions => { :role => 'Intern' },
+      :order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb

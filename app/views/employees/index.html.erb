@@ -1,5 +1,15 @@
-<h1>Listing employees</h1>
+<h2>Interns & Staff</h2>
 
+<h4>Staff</h4>
+<ul class="employees">
+  <%= render :partial => 'employees/employee', :collection => @staff %>
+</ul>
+
+<h4>Interns</h4>
+<ul class="employees">
+  <%= render :partial => 'employees/employee', :collection => @interns %>
+</ul>
+<!--
 <table>
   <tr>
     <th>Avatar</th>
@@ -27,7 +37,7 @@
   </tr>
 <% end %>
 </table>
-
+-->
 <br />
 
 <%= link_to 'New Employee', new_employee_path %>

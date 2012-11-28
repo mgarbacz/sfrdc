@@ -10,6 +10,15 @@ div#page {
   background-color:#fafafa;
 }
 
+img.shadow {
+  background:#fafafa;
+  padding:4px;
+  border:1px solid #ccc;
+  -moz-box-shadow:3px 3px 3px #999;
+  -webkit-box-shadow:3px 3px 3px #999;
+  box-shadow:3px 3px 3px #999;
+}
+
 /* Changing default Bootstrap navbar style */
 .navbar-inner {
   background-color:#fafafa;
