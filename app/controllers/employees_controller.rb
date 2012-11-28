@@ -39,6 +39,11 @@ before_filter :authenticate_admin!, :except => [:index, :show]
     @employee = Employee.find(params[:id])
   end
 
+  # GET /employees/1/crop
+  def crop
+    @employee = Employee.find(params[:id])
+  end
+
   # POST /employees
   # POST /employees.json
   def create

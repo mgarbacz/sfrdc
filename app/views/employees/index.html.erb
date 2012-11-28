@@ -10,6 +10,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @employees.each do |employee| %>
@@ -21,6 +22,7 @@
     <td><%= employee.bio %></td>
     <td><%= link_to 'Show', employee %></td>
     <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Edit Thumbnail', crop_employee_path(employee) %></td>
     <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>

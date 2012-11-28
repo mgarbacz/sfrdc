@@ -2,18 +2,29 @@
 
 <div class="row">
   <div class="span8">
-    <%= image_tag @employee.avatar.url(:regular), :id => 'avatar_full' %>
+    <%= image_tag @employee.avatar.url(:original), :id => 'avatar_full' %>
   </div>
 
   <p>Preview:</p>
   <div id="avatar_cropped_container" class="span4">
-    <%= image_tag @employee.avatar.url(:regular), :id => 'avatar_cropped' %>
+    <%= image_tag @employee.avatar.url(:original), :id => 'avatar_cropped' %>
   </div>
 </div>
 
-<%= form_for @employee do |f| %>
-  <% for attribute in [:crop_x, :crop_y, :crop_w, :crop_h] %>
-    <%= f.hidden_field attribute, :id => attribute %>
-  <% end %>
-  <p><%= f.submit "Crop" %></p>
+<%= form_for(@employee) do |f| %>
+  <div class="field">
+    <%= f.hidden_field :crop_x, :value => @employee[:crop_x]%>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :crop_y, :value => @employee[:crop_y]%>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :crop_w, :value => @employee[:crop_w]%>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :crop_h, :value => @employee[:crop_h]%>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Crop' %>
+  </div>
 <% end %>

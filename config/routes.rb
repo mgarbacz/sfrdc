@@ -13,7 +13,12 @@ Sfrdc::Application.routes.draw do
 
   devise_for :admins
 
-  resources :brochures, :employees, :jobs, :quotes
+  resources :brochures, :jobs, :quotes
+  resources :employees do
+    member do
+      get 'crop'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
