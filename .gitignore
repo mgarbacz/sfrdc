@@ -10,8 +10,8 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
-# Ignore the employee avatars
-/public/system/employees
+# Ignore the uploaded files
+/public/system/
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
@@ -20,7 +20,7 @@
 # Ignore mac's DS_STORE
 .DS_STORE
 
-# Ignore .swp files if open when committing
+# Ignore vim swap files if open when committing
 *.swp
 
 # Ignore actual passwords config file
