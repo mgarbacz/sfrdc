@@ -1,25 +1,23 @@
-<%= image_tag @employee.avatar.url(:thumb) %>
+<%= div_for @employee do %>
 
-<p>
-  <b>Name:</b>
-  <%= @employee.name %>
-</p>
+  <%= link_to 'Back to Interns & Staff', employees_path %>
 
-<p>
-  <b>Role:</b>
-  <%= @employee.role %>
-</p>
+  <div class="employee_info">
+    <div class="row">
+      <%= image_tag @employee.avatar.url(:thumb), :class => 'shadow span3' %>
+      <div class="span8">
+        <p><%= @employee.name %></p>
+        <em><%= @employee.role %> / <%= @employee.department %></em>
+        <p><%= @employee.bio %>
+      </div>
+    </div>
+  </div>
 
-<p>
-  <b>Department:</b>
-  <%= @employee.department %>
-</p>
+<% end %>
 
-<p>
-  <b>Bio:</b>
-  <%= @employee.bio %>
-</p>
-
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Crop Thumbnail', crop_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<% if admin_signed_in? %>
+  <%= link_to 'Edit', edit_employee_path(@employee) %> |
+  <%= link_to 'Crop Thumbnail', crop_employee_path(@employee) %> |
+  <%= link_to 'Delete', @employee, method: :delete, data: { 
+    :confirm => 'Are you sure you wish to delete this employee?' } %>
+<% end %>

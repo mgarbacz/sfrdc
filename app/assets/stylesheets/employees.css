@@ -57,6 +57,10 @@ ul.employees li div.infoBubble em {
   color:#999;
 }
 
+div.employee_info {
+  padding:10px 0;
+}
+
 #avatar_full {
   max-width:none;
 }

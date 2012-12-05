@@ -1,43 +1,28 @@
 <h2>Interns & Staff</h2>
 
+<h4>Who Are We?</h4>
+<p>During peak semesters, the State Farm Research and Development Center employs more than 70 interns. Collaboration and mentoring between Research and Development Center interns and State Farm staff are key components of the Research and Development Center experience.<p>
+<p>Meet a few of our students. Find out what they like most about their Research and Development Center internship — and their favorite places to hang out around campus.</p>
+<p>Meet our staff and learn more about their vision for the Research and Development Center.</p>
+
 <h4>Staff</h4>
 <ul class="employees">
+  <% if admin_signed_in? %>
+    <li class="employee">
+      <%= link_to(image_tag('new_employee.png', :class => 'shadow'),
+        new_employee_path) %>
+    </li>
+  <% end %>
   <%= render :partial => 'employees/employee', :collection => @staff %>
 </ul>
 
 <h4>Interns</h4>
 <ul class="employees">
+  <% if admin_signed_in? %>
+    <li class="employee">
+      <%= link_to(image_tag('new_employee.png', :class => 'shadow'),
+        new_employee_path) %>
+    </li>
+  <% end %>
   <%= render :partial => 'employees/employee', :collection => @interns %>
 </ul>
-<!--
-<table>
-  <tr>
-    <th>Avatar</th>
-    <th>Name</th>
-    <th>Role</th>
-    <th>Department</th>
-    <th>Bio</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @employees.each do |employee| %>
-  <tr>
-    <td><%= image_tag employee.avatar.url(:thumb) %></td>
-    <td><%= employee.name %></td>
-    <td><%= employee.role %></td>
-    <td><%= employee.department %></td>
-    <td><%= employee.bio %></td>
-    <td><%= link_to 'Show', employee %></td>
-    <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
-    <td><%= link_to 'Edit Thumbnail', crop_employee_path(employee) %></td>
-    <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
--->
-<br />
-
-<%= link_to 'New Employee', new_employee_path %>

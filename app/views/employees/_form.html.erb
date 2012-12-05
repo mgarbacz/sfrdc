@@ -1,4 +1,4 @@
-<%= form_for(@employee) do |f| %>
+<%= form_for(@employee, :html => { :class => 'form-horizontal' } ) do |f| %>
   <% if @employee.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
@@ -11,24 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :role %><br />
-    <%= f.text_field :role %>
+  <div class="control-group">
+    <%= f.label :role, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:role, ['Intern', 'Staff']) %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :department %><br />
-    <%= f.text_field :department %>
+  <div class="control-group">
+    <%= f.label :department, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.select(:department, ['Actuarial', 'Strategic Resources',
+        'Systems', 'MAGNet', 'Human Resources', 'Oversight Manager']) %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :bio %><br />
-    <%= f.text_area :bio %>
+  <div class="control-group">
+    <%= f.label :picture, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :avatar %>
+    </div>
   </div>
-  <%= f.file_field :avatar %>
+  <div class="control-group">
+    <%= f.label :bio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :bio %>
+    </div>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create Employee', :class => 'btn' %>
   </div>
 <% end %>
