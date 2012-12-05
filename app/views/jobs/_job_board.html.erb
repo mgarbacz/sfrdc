@@ -1,0 +1,47 @@
+<div class="job_board">
+
+  <div class="jobs">
+    <h4>Actuarial <%= link_to '(info)', @acturial_pdf %></h4>
+    <% if @actuarial_jobs.count > 0 %>
+      <ul>
+        <%= render :partial => 'jobs/job', :collection => @actuarial_jobs %>
+      </ul>
+    <% else %>
+      <em>None listed. Check the info link for details</em>
+    <% end %>
+  </div>
+
+  <div class="jobs">
+    <h4>Strategic Resources <%= link_to '(info)', @sr_pdf %></h4>
+    <% if @sr_jobs.count > 0 %>
+      <ul>
+        <%= render :partial => 'jobs/job', :collection => @sr_jobs %>
+      </ul>
+    <% else %>
+      <em>None listed. Check the info link for details</em>
+    <% end %>
+  </div>
+
+  <div class="jobs">
+    <h4>Systems <%= link_to '(info)', @systems_pdf %></h4>
+    <% if @systems_jobs.count > 0 %>
+      <ul>
+        <%= render :partial => 'jobs/job', :collection => @systems_jobs %>
+      </ul>
+    <% else %>
+      <em>None listed. Check the info link for details</em>
+    <% end %>
+  </div>
+
+  <div class="jobs">
+    <h4>MAGNet <%= link_to '(info)', @magnet_pdf %></h4>
+    <% if @magnet_jobs.count > 0 %>
+      <ul>
+        <%= render :partial => 'jobs/job', :collection => @magnet_jobs %>
+      </ul>
+    <% else %>
+      <em>None listed. Check the info link for details</em>
+    <% end %>
+  </div>
+
+</div>

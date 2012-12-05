@@ -1,31 +1,12 @@
-<h1>Listing jobs</h1>
+<h2>Opportunities</h2>
 
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Department</th>
-    <th>Description</th>
-    <th>Apply</th>
-    <th>Apply by</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h4>Job Board</h4>
+<p>An internship at the RDC is not a one-size-fits-all program. Your role is about your strengths and interests, as well as inspired collaboration across diverse disciplines.</p>
+<p>The State Farm Research and Development Center has it all: Undergraduate or graduate internship positions, full time or part time roles, and a summer or academic year internship experience.</p>
+<p>You can apply to join our RDC team at State Farm Careers using an available job code selected from positions listed below:</p>
 
-<% @jobs.each do |job| %>
-  <tr>
-    <td><%= job.position %></td>
-    <td><%= job.department %></td>
-    <td><%= job.description %></td>
-    <td><%= job.apply %></td>
-    <td><%= job.apply_by %></td>
-    <td><%= link_to 'Show', job %></td>
-    <td><%= link_to 'Edit', edit_job_path(job) %></td>
-    <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% if admin_signed_in? %>
+  <%= link_to 'New Job', new_job_path, :class => 'btn'  %>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Job', new_job_path %>
+<%= render :partial => 'jobs/job_board' %>

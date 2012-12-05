@@ -6,6 +6,11 @@ before_filter :authenticate_admin!, :except => [:index, :show]
   def index
     @jobs = Job.all
 
+    @actuarial_jobs = Job.all(:conditions => { :department => 'Actuarial' })
+    @sr_jobs = Job.all(:conditions => { :department => 'Strategic Resources' })
+    @systems_jobs = Job.all(:conditions => { :department => 'Systems' })
+    @magnet_jobs = Job.all(:conditions => { :department => 'MAGNet' })
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @jobs }
