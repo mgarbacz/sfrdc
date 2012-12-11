@@ -3,23 +3,26 @@
 This is the Ruby on Rails website for the SF Research & Development Center. It allows non-programmers to administer the content. Its about to get a serious functionality overhaul!
 
 == Todos 
-* Rebuilding from scratch on 3.2.8 rails.
-* Creating static page parts controller to handle content of 'static' pages
 * Considering impact of changes to mobile version of the website
 * Further testing of crop feature
 * Decouple departments from code (department model)
 * Create default avatar images for interns & staff
 * Link routes and uploaded files to CMS
+* PageContent controller using mongoid for dynamic pages set by admins
+* Text-editor for admins
+* Installation of new software on production server
+* Configuration of new setup on production server
 
 == Dones
 * Running on 3.2.8 Rails with 1.9.3 Ruby
 * Created controller to handle 'static' pages - Pages controller
-* Quotes controller tested and built
 * New look with Twitter's Bootstrap
+* Quotes controller 
+* Employees controller
 * Roll Avatar Cropper into Employee
 * Implement employee image cropping 
 * Researching gems to potentially replace original site's gems
-* Recreating all other data-powered controllers as they exist in original site
+* Jobs controller
 
 == Controllers & actions
 * static:
