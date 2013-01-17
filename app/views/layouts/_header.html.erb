@@ -1,24 +1,26 @@
-<header class="navbar navbar-fixed-top">
-  <nav class="navbar-inner">
-    <div class="container">
-      <ul class="nav">
-        <li><%= link_to 'Home',             home_path %></li>
-        <li><%= link_to 'About Us',         about_us_path %></li>
-        <li><%= link_to 'Opportunities',    opportunities_path %></li>
-        <li><%= link_to 'Interns & Staff',  interns_and_staff_path %></li>
-        <li><%= link_to 'Benefits',         benefits_path %></li>
-        <li><%= link_to 'Partnerships',     partnerships_path %></li>
-        <li><%= link_to 'Contact Us',       contact_us_path %></li>
-      </ul>
-    </div>
-    <% if admin_signed_in? %>
-      <div id="user_nav">
-        <%= link_to 'Admin', admin_path %> |
-        <%= link_to 'Sign out', 
-            destroy_admin_session_path, :method => :delete %>
+<header> 
+  <div class="navbar navbar-fixed-top">
+    <nav class="navbar-inner">
+      <div class="container">
+        <ul class="nav">
+          <li><%= link_to 'Home',             home_path %></li>
+          <li><%= link_to 'About Us',         about_us_path %></li>
+          <li><%= link_to 'Opportunities',    opportunities_path %></li>
+          <li><%= link_to 'Interns & Staff',  interns_and_staff_path %></li>
+          <li><%= link_to 'Benefits',         benefits_path %></li>
+          <li><%= link_to 'Partnerships',     partnerships_path %></li>
+          <li><%= link_to 'Contact Us',       contact_us_path %></li>
+        </ul>
       </div>
-    <% end %>
-  </nav>
+      <% if admin_signed_in? %>
+        <div id="user_nav">
+          <%= link_to 'Admin', admin_path %> |
+          <%= link_to 'Sign out', 
+              destroy_admin_session_path, :method => :delete %>
+        </div>
+      <% end %>
+    </nav>
+  </div>
   <div id="header_logos">
     <div class="container">
       <div id="header_rdc_logo">
