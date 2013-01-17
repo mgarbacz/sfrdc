@@ -11,6 +11,7 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Create default avatar images for interns & staff
 * Link routes and uploaded files to CMS
 * Update the 404 page
+* Redirect sfresearchcenter.com
 
 == Dones
 * Running on 3.2.8 Rails with 1.9.3 Ruby
