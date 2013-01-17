@@ -40,7 +40,16 @@ class PageContentsController < ApplicationController
   # POST /page_contents
   # POST /page_contents.json
   def create
-    @page_content = PageContent.new(params[:page_content])
+    # Simply creating a new PageContent, we don't want to pass attributes yet
+    @page_content = PageContent.new
+    
+    # Picking out the dynamic attributes for the category we are creating
+    category = params[:page_content][:category]
+    @page_content.accessible = 
+      PageContentConfig::DYNAMIC_ATTRIBUTES[category]['attributes'].keys
+
+    # Now we want to pass the attributes, since our dynamic ones have been added
+    @page_content.attributes = params[:page_content]
 
     respond_to do |format|
       if @page_content.save
@@ -57,6 +66,11 @@ class PageContentsController < ApplicationController
   # PUT /page_contents/1.json
   def update
     @page_content = PageContent.find(params[:id])
+
+    # Picking out the dynamic attributes for the category we are creating
+    category = params[:page_content][:category]
+    @page_content.accessible = 
+      PageContentConfig::DYNAMIC_ATTRIBUTES[category]['attributes'].keys
 
     respond_to do |format|
       if @page_content.update_attributes(params[:page_content])
