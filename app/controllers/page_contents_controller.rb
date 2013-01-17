@@ -67,7 +67,7 @@ class PageContentsController < ApplicationController
   def update
     @page_content = PageContent.find(params[:id])
 
-    # Picking out the dynamic attributes for the category we are creating
+    # Picking out the dynamic attributes for the category we are updating 
     category = params[:page_content][:category]
     @page_content.accessible = 
       PageContentConfig::DYNAMIC_ATTRIBUTES[category]['attributes'].keys
