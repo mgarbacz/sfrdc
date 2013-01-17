@@ -12,6 +12,8 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Text-editor for admins
 * Installation of new software on production server
 * Configuration of new setup on production server
+* Update the 404 page
+* Redirect sfresearchcenter.com
 
 == Dones
 * Running on 3.2.8 Rails with 1.9.3 Ruby
@@ -23,6 +25,7 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Implement employee image cropping 
 * Researching gems to potentially replace original site's gems
 * Jobs controller
+* MongoDB added as database of choice for PageContent (b/c dynamic fields)
 
 == Controllers & actions
 * static:

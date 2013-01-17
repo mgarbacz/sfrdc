@@ -1,0 +1,10 @@
+text:
+  attributes:
+    content:
+      name: content
+    size:
+      name: size
+nivo_slider:
+  attributes:
+    images:
+      name: images
