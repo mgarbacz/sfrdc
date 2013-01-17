@@ -1,6 +1,8 @@
 class PageContent
   include Mongoid::Document
+
   field :title
   field :category
-  field :content
+
+  attr_accessible :title, :category
 end
