@@ -1,10 +1,11 @@
 class PageContent
   include Mongoid::Document
 
-  field :title
+  field :page
   field :category
+  field :position
 
-  attr_accessible :title, :category
+  attr_accessible :page, :category, :position 
 
   # :accessible is a variable used to store category specific dynamic fields
   # which allows us to set attr_accessible dynamically per category

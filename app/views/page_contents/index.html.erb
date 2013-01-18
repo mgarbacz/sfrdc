@@ -2,18 +2,26 @@
 
 <table>
   <tr>
+    <th>Page</th>
+    <th>Category</th>
+    <th>Position</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @page_contents.each do |page_content| %>
-  <tr>
-    <td><%= link_to 'Show', page_content %></td>
-    <td><%= link_to 'Edit', edit_page_content_path(page_content) %></td>
-    <td><%= link_to 'Destroy', page_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @page_contents.each do |page_content| %>
+    <tr>
+      <td>page_content.page</tdr>
+      <td>page_content.category</td>
+      <td>page_content.position</td>
+      <td><%= link_to 'Show', page_content %></td>
+      <td><%= link_to 'Edit', edit_page_content_path(page_content) %></td>
+      <td><%= link_to 'Destroy', page_content, method: :delete, data:
+              { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+
 </table>
 
 <br />
