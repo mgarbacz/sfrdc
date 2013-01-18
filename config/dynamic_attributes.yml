@@ -1,10 +1,25 @@
-text:
+text_box:
   attributes:
+    title:
+      name: title
     content:
       name: content
     size:
       name: size
-nivo_slider:
+img_slider:
   attributes:
     images:
       name: images
+      type: 
+youtube_video:
+  attributes:
+    video_url:
+      name: video_url
+    size:
+      name: size
+twitter_feed:
+  attributes:
+    feed_url:
+      name: feed_url
+    num_posts:
+      name: num_posts
