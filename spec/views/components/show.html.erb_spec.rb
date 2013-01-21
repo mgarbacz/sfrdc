@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "page_contents/show" do
+describe "components/show" do
   before(:each) do
-    @page_content = assign(:page_content, stub_model(PageContent))
+    @component = assign(:component, stub_model(Component))
   end
 
   it "renders attributes in <p>" do
