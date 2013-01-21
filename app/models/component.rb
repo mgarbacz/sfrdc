@@ -1,4 +1,4 @@
-class PageContent
+class Component
   include Mongoid::Document
 
   field :page
