@@ -1,3 +1,4 @@
+# Standard text info display 
 text_box:
   attributes:
     title:
@@ -6,17 +7,20 @@ text_box:
       name: content
     size:
       name: size
+# Slider plugin that flips through a series of images
 img_slider:
   attributes:
     images:
       name: images
       type: 
+# Youtube video embedded into the page
 youtube_video:
   attributes:
     video_url:
       name: video_url
     size:
       name: size
+# Twitter feed embedded into the page
 twitter_feed:
   attributes:
     feed_url:
