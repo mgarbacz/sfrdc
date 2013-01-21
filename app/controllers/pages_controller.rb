@@ -3,6 +3,7 @@ before_filter :authenticate_admin!, :only => :admin
 
   # Home page
   def home
+    @component = Component.new
   end
 
   # About Us page

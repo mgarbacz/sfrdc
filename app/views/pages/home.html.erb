@@ -1,2 +1,10 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<% if admin_signed_in? %>
+  <%= render 'components/add/text_box_modal' %>
+  <%= render 'components/add/img_slider_modal' %>
+  <%= render 'components/add/youtube_video_modal' %>
+  <%= render 'components/add/twitter_feed_modal' %>
+  <%= render 'components/add/component_button' %>
+<% end %>
