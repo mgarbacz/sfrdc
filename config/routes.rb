@@ -13,7 +13,7 @@ Sfrdc::Application.routes.draw do
 
   devise_for :admins
 
-  resources :brochures, :jobs, :quotes, :page_contents
+  resources :brochures, :jobs, :quotes, :components
   resources :employees do
     member do
       get 'crop'
