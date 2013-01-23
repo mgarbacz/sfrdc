@@ -1,5 +1,5 @@
 # Standard text info display 
-text_box:
+text_section:
   attributes:
     title:
       name: title
