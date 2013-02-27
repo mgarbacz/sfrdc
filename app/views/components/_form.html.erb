@@ -11,6 +11,18 @@
     </div>
   <% end %>
 
+  <div class="control-group">
+    <%= f.label :page, :class => 'control-label' %>
+    <div class="controls">
+      <% page_options = ['Home',
+                         'About Us',
+                         'Benefits',
+                         'Partnerships',
+                         'Contact Us'] %>
+      <% disabling = @component.page? %>
+      <%= f.select :page, page_options, {}, :disabled => disabling %>
+    </div>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

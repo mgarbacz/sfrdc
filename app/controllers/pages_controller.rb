@@ -4,7 +4,7 @@ before_filter :authenticate_admin!, :only => :admin
   # Home page
   def home
     @component = Component.new
-    @component.page = 'home'
+    @component.page = 'Home'
   end
 
   # About Us page

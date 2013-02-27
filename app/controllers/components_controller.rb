@@ -27,6 +27,11 @@ before_filter :authenticate_admin!
   def new
     @component = Component.new
 
+    # Checking if we already set page via 'Add Component' buttons on pages
+    if params[:page]
+      @component.page = params[:page]
+    end
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @component }
