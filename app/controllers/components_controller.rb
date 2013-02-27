@@ -1,5 +1,5 @@
 class ComponentsController < ApplicationController
-#before_filter :authenticate_admin!
+before_filter :authenticate_admin!
   # GET /components
   # GET /components.json
   def index
