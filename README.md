@@ -1,8 +1,8 @@
-= sfrdc
+# sfrdc
 
 This is the Ruby on Rails website for the SF Research & Development Center. It allows non-programmers to administer the content. Its about to get a serious functionality overhaul!
 
-== Todos 
+## Todos 
 * Considering impact of changes to mobile version of the website
 * Further testing of crop feature
 * Decouple departments from code (department model)
@@ -15,40 +15,7 @@ This is the Ruby on Rails website for the SF Research & Development Center. It a
 * Update the 404 page
 * Redirect sfresearchcenter.com
 
-== Dones
-* Running on 3.2.8 Rails with 1.9.3 Ruby
-* Created controller to handle 'static' pages - Pages controller
-* New look with Twitter's Bootstrap
-* Quotes controller 
-* Employees controller
-* Roll Avatar Cropper into Employee
-* Implement employee image cropping 
-* Researching gems to potentially replace original site's gems
-* Jobs controller
-* MongoDB added as database of choice for PageContent (b/c dynamic fields)
-
-== Controllers & actions
-* static:
-  * :home
-  * :about_us
-  * :opportunities
-  * :interns_and_staff
-  * :benefits
-  * :partnerships
-  * :contact_us
-  * :admin
-* static_page_content:
-* employees
-* jobs
-* quotes
-* events
-* posts
-* users
-* user_sessions
-* password_reset
-* application (duh!)
-
-== Notes
+## Notes
 * Generated js/css files won't be served by rails in production (b/c static)
 * Need ImageMagick(images) and GhostScript(pdfs) installed
 * Need to add default_url_options for production (mailer)
