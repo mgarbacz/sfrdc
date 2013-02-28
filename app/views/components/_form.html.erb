@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <!-- Page -->
   <div class="control-group">
     <%= f.label :page, :class => 'control-label' %>
     <div class="controls">
@@ -22,7 +23,25 @@
       <% disabling = @component.page? %>
       <%= f.select :page, page_options, {}, :disabled => disabling %>
     </div>
-  </div>
+  </div><!-- end Page -->
+  <!-- Category -->
+  <div class="control-group">
+    <%= f.label :category, :class => 'control-label' %>
+    <div class="controls">
+      <% category_options = ComponentConfig::DYNAMIC_ATTRIBUTES.keys.collect {
+          |category| category.titleize } %>
+      <%= f.select :category, category_options %>
+    </div>
+  </div><!-- end Category -->
+  <!-- Position -->
+  <div class="control-group">
+    <%= f.label :position, :class => 'control-label' %>
+    <div class="controls">
+      <% position_options = 
+          Component.where(:page => @component.page).count + 1 %>
+      <%= f.select :position, 1..position_options %>
+    </div>
+  </div><!-- end Position -->
   <div class="actions">
     <%= f.submit %>
   </div>
