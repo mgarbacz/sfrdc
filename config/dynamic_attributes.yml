@@ -8,7 +8,7 @@ text_section:
     size:
       name: size
 # Slider plugin that flips through a series of images
-img_slider:
+image_slider:
   attributes:
     images:
       name: images
