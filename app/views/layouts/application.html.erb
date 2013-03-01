@@ -21,9 +21,9 @@
 
       <%= yield %>
 
-      <% if @component and
-            controller_name != 'components' and
-            admin_signed_in? %>
+      <% if admin_signed_in? and
+            @component and
+            controller_name != 'components' %>
         <%= render 'components/add_component_button' %>
       <% end %>
     </div><!-- end .container -->
