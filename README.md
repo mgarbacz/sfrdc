@@ -1,6 +1,6 @@
 # sfrdc
 
-This is the Ruby on Rails website for the SF Research & Development Center. It allows non-programmers to administer the content. Its about to get a serious functionality overhaul!
+This is the Ruby on Rails website for the SF Research & Development Center.
 
 ## Todos 
 * Components admin creation views
