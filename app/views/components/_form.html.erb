@@ -42,6 +42,12 @@
       <%= f.select :position, 1..position_options %>
     </div>
   </div><!-- end Position -->
+
+  <%= render 'components/form/text_section' %>
+  <%= render 'components/form/image_slider' %>
+  <%= render 'components/form/youtube_video' %>
+  <%= render 'components/form/twitter_feed' %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
