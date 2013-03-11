@@ -43,10 +43,10 @@
     </div>
   </div><!-- end Position -->
 
-  <%= render 'components/form/text_section' %>
-  <%= render 'components/form/image_slider' %>
-  <%= render 'components/form/youtube_video' %>
-  <%= render 'components/form/twitter_feed' %>
+  <%= render 'components/form/text_section', :f => f %>
+  <%= render 'components/form/image_slider', :f => f %>
+  <%= render 'components/form/youtube_video', :f => f %>
+  <%= render 'components/form/twitter_feed', :f => f %>
 
   <div class="actions">
     <%= f.submit %>
