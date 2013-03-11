@@ -1,0 +1,12 @@
+<div class="control-group">
+  <%= f.label :feed_url, :class => 'control-label' %>
+  <div class="controls">
+    <%= f.text_field :feed_url %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.label :num_posts, :class => 'control-label' %>
+  <div class="controls">
+    <%= f.select(:num_posts, ['1', '2', '3', '4', '5'] %>
+  </div>
+</div>
