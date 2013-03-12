@@ -1,12 +1,18 @@
 <div class="control-group">
-  <%= f.label :feed_url, :class => 'control-label' %>
+  <label class="control-label" for="component_feed_url">Feed Url</label>
   <div class="controls">
-    <%= f.text_field :feed_url %>
+    <input id="component_feed_url" name="component[feed_url]" type="text" />
   </div>
 </div>
 <div class="control-group">
-  <%= f.label :num_posts, :class => 'control-label' %>
+  <label class="control-label" for="component_num_posts">Number of Posts</label>
   <div class="controls">
-    <%= f.select(:num_posts, ['1', '2', '3', '4', '5']) %>
+    <select id="component_num_posts" name="component[num_posts]">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
   </div>
 </div>

@@ -5,14 +5,20 @@
   </div>
 </div>
 <div class="control-group">
-  <%= f.label :content, :class => 'control-label' %>
+  <label class="control-label" for="component_content">Content</label>
   <div class="controls">
-    <%= f.text_area :content %>
+    <textarea id="component_content" name="component[content]"
+              rows="20" cols="40"></textarea>
   </div>
 </div>
 <div class="control-group">
-  <%= f.label :size, :class => 'control-label' %>
+  <label class="control-label" for="component_size">Size</label>
   <div class="controls">
-    <%= f.select(:size, ['3', '6', '9', '12']) %>
+    <select id="component_size" name="component[size]">
+      <option value="3">3</option>
+      <option value="6">6</option>
+      <option value="6">6</option>
+      <option value="9">9</option>
+    </select>
   </div>
 </div>

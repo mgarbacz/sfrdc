@@ -1,12 +1,15 @@
 <div class="control-group">
-  <%= f.label :video_url, :class => 'control-label' %>
+  <label class="control-label" for="component_video_url">Video Url</label>
   <div class="controls">
-    <%= f.text_field :video_url %>
+    <input id="component_video_url" name="component[video_url]" type="text" />
   </div>
 </div>
 <div class="control-group">
-  <%= f.label :size, :class => 'control-label' %>
+  <label class="control-label" for="component_size">Size</label>
   <div class="controls">
-    <%= f.select(:size, ['3', '6', '9', '12']) %>
+    <select id="component_size" name="component[size]">
+      <option value="9">9</option>
+      <option value="12">12</option>
+    </select>
   </div>
 </div>
