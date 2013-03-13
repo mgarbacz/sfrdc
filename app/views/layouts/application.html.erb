@@ -7,7 +7,6 @@
   <title><%= content_for?(:title) ? yield(:title) :
     'State Farm Research and Development Center' %></title>
   <%= stylesheet_link_tag    'application', :media => 'all' %>
-  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
   <%= yield(:head) %>
@@ -30,5 +29,7 @@
   </div><!-- end #page -->
 
   <%= render 'layouts/footer' %>
+
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>
